@@ -1,5 +1,5 @@
-# Multimedia Programming II (MMP 310)
-## Assignment 1
+# Assignment 1
+## Multimedia Programming II (MMP 310)
 
 Spring 2017
 
