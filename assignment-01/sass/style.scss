@@ -1,0 +1,44 @@
+@import 'reset';
+
+$font-stack--content: 'Times New Roman', Times, Georgia, serif;
+$font-stack--footer:  Arial, Helvetica, sans-serif;
+
+$grid-column:         40px;
+$grid-gutter:         $grid-column;
+$grid-unit:           $grid-column + $grid-gutter;
+$grid-margin:         ($grid-gutter / 2);
+$grid-leading:        24px;
+
+$color--heading:      rgb(65, 132, 133);
+$color--link:         rgb(127, 148, 18);
+$color--border:       rgb(204, 204, 204);
+$color--content:      rgb(51, 51, 51);
+
+body {
+   font: 1rem / 1.4 $font-stack--content;
+   width: 8 * $grid-unit;
+   margin: 0 auto;
+}
+
+header {
+   background: black url('../img/logo.png') no-repeat scroll 50% 50%;
+   height: 6.8 * $grid-leading;
+}
+
+h1 {
+   font-size: 2rem;
+   color: $color--heading;
+}
+
+div {
+   padding: 0 $grid-margin;
+   border: {
+      right: 1px solid $color--border;
+      bottom: 1px solid $color--border;
+      left: 1px solid $color--border;
+   }
+}
+
+footer {
+   font: 1rem / 1.4 $font-stack--footer;
+}
