@@ -1,5 +1,11 @@
 @import 'reset';
 
+//
+// Compile from the assignment-01 folder:
+//
+//    sass --unix-newlines --sourcemap=none --style expanded --watch  sass/style.scss:css/style.css
+//
+
 $font-stack--content: 'Times New Roman', Times, Georgia, serif;
 $font-stack--footer:  Arial, Helvetica, sans-serif;
 
