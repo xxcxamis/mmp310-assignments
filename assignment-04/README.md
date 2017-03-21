@@ -52,4 +52,5 @@ As an example
 Look at our course syllabus at [`http://roy.vanegas.org/teaching/at-bmcc/multimedia-programming-ii/`](http://roy.vanegas.org/teaching/at-bmcc/multimedia-programming-ii/) to get an exact idea of how your accordion should behave.
 
 ## Due
-This assignment is due by 11:59 PM on Tuesday, 21 March 2017.
+This assignment is due by 11:59 PM on Wednesday, 22 March 2017.
+
