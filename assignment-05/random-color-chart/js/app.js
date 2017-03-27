@@ -25,7 +25,7 @@ window.onload = function () {
         table = document.createElement('table'),
         tableRows = [],
         tableColumns = [],
-        userInput = prompt('Enter a whole number', '4');
+        userInput = prompt('Enter a whole number between 1-150', '4');
 
     const
         MIN = 0,
@@ -36,42 +36,43 @@ window.onload = function () {
     // its base-10 numerical equivalent.
     //
 
-
-    userInput = parseInt(userInput, 10);
     //Is negative input allowed?
     //Are strings allowed in your input?
 
-            // let num = /^[0-9]+$/;
-            //     if (userInput.value.match(num)) {
-            //         console.log("Success.");
-            //     } else {
-            //         alert("Fail. Refresh, try again.");
-            //     }
+            var num = /^[0-9]+$/;
+                if (userInput.match(num)) {
+                    userInput = parseInt(userInput,10);
 
-    for (row = 0; row < userInput; row += 1) {
-        tableRows[row] = document.createElement('tr');
+                    if(userInput<=150){
+                        for (row = 0; row < userInput; row += 1) {
+                            tableRows[row] = document.createElement('tr');
 
-        //Have elements been created?
-        console.log('rows added');
+                        for (column = 0; column < userInput; column += 1) {
+                            tableColumns[cellIndex] = document.createElement('td');
 
-        for (column = 0; column < userInput; column += 1) {
-            tableColumns[cellIndex] = document.createElement('td');
+                            //Are references to DOM components valid?
+                            tableColumns[cellIndex].style.backgroundColor =
+                                    'rgb(' + getRandomNumber(MIN, MAX) + ', ' +
+                                    getRandomNumber(MIN, MAX) + ', ' +
+                                    getRandomNumber(MIN, MAX) + ')';
+                                    
+                                    console.log('colors styled');
 
-            //Are references to DOM components valid?
-            tableColumns[cellIndex].style.backgroundColor =
-                    'rgb(' + getRandomNumber(MIN, MAX) + ', ' +
-                    getRandomNumber(MIN, MAX) + ', ' +
-                    getRandomNumber(MIN, MAX) + ')';
-                    
-                    console.log('colors styled');
+                            tableRows[row].appendChild(tableColumns[cellIndex]);
 
-            tableRows[row].appendChild(tableColumns[cellIndex]);
+                            cellIndex += 1;
+                        }
 
-            cellIndex += 1;
-        }
+                        table.appendChild(tableRows[row]);
+                    }
 
-        table.appendChild(tableRows[row]);
-    }
+                    body.appendChild(table);
 
-    body.appendChild(table);
+                }else {
+                    alert("Your number was too large. Refresh and try again.")
+                }
+
+                }else {
+                    alert("That was not a good enough number. Refresh and try again.");
+                }
 };
