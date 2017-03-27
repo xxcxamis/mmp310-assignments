@@ -25,7 +25,7 @@ window.onload = function () {
         table = document.createElement('table'),
         tableRows = [],
         tableColumns = [],
-        userInput = prompt('Enter a number', '4');
+        userInput = prompt('Enter a whole number', '4');
 
     const
         MIN = 0,
@@ -35,18 +35,35 @@ window.onload = function () {
     // Convert the input from the user, which is created initially as a string, to
     // its base-10 numerical equivalent.
     //
+
+
     userInput = parseInt(userInput, 10);
+    //Is negative input allowed?
+    //Are strings allowed in your input?
+
+            // let num = /^[0-9]+$/;
+            //     if (userInput.value.match(num)) {
+            //         console.log("Success.");
+            //     } else {
+            //         alert("Fail. Refresh, try again.");
+            //     }
 
     for (row = 0; row < userInput; row += 1) {
         tableRows[row] = document.createElement('tr');
 
+        //Have elements been created?
+        console.log('rows added');
+
         for (column = 0; column < userInput; column += 1) {
             tableColumns[cellIndex] = document.createElement('td');
 
+            //Are references to DOM components valid?
             tableColumns[cellIndex].style.backgroundColor =
                     'rgb(' + getRandomNumber(MIN, MAX) + ', ' +
                     getRandomNumber(MIN, MAX) + ', ' +
                     getRandomNumber(MIN, MAX) + ')';
+                    
+                    console.log('colors styled');
 
             tableRows[row].appendChild(tableColumns[cellIndex]);
 
