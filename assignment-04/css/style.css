@@ -1,0 +1,8 @@
+#tab1, #tab2, #tab3{
+    display:none;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #998;
+  cursor: pointer;
+}
