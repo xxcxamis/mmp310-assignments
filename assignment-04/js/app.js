@@ -1,3 +1,5 @@
+// #tab1, #tab2, #tab3 = content.style.display = 'none'
+
 accordion = document.getElementById('accordion');
 
 titles = accordion.getElementsByTagName('h2');
