@@ -31,3 +31,16 @@ function content(myContent) {
   var link3 = document.getElementsByTagName('li')[2];
   link3.innerHTML = myContent.list[2].content;
 }
+
+
+var icon1 = document.getElementsByTagName('span')[0];
+icon1.innerHTML = '<span class="fa fa-facebook"></span>';
+
+var icon2 = document.getElementsByTagName('span')[1];
+icon2.innerHTML = '<span class="fa fa-instagram"></span>';
+
+var icon3 = document.getElementsByTagName('span')[2];
+icon3.innerHTML = '<span class="fa fa-twitter"></span>';
+
+var icon4 = document.getElementsByTagName('span')[3];
+icon4.innerHTML = '<span class="fa fa-youtube"></span>';
