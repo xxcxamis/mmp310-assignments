@@ -32,6 +32,29 @@ function content(myContent) {
   link3.innerHTML = myContent.list[2].content;
 }
 
+var jsonNav = document.createElement('script');
+jsonNav.setAttribute('src', 'data/nav.json');
+head.appendChild(jsonNav);
+
+function headerNav(myNav) {
+  var nav = document.getElementsByTagName('nav')[0];
+  var navsUL = '<ul>';
+
+  for(var i = 0; i < myNav.items.length; i++){
+    if (myNav.items[i].items.length > 0){
+      navsUL += '<li><a href=" ' + myNav.items[i].url + ' ">';
+      navsUL += myNav.items[i].label + '</a>';
+    }
+    else{
+      navsUL += '<li><a href=" ' + myNav.items[i].url + ' ">';
+      navsUL += myNav.items[i].label + '</a></li>';
+    }
+  }
+  navsUL += '</ul>';
+  nav.innerHTML = navsUL;
+}
+
+
 
 var icon1 = document.getElementsByTagName('span')[0];
 icon1.innerHTML = '<span class="fa fa-facebook"></span>';
